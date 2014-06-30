@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>absolut</title>
+
+    <link rel="stylesheet" type="text/css" href="css/x.css">
+    <link href='http://fonts.googleapis.com/css?family=Snippet' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+
+<div class="block">
+    
+    <div class="centered">
+		<span class="btext" role="link">I'm a div</span>
+    </div>
+
+    <div id="box"></div>   
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$( document ).ready(function() {
+    console.log( "ready!" );
+    $('.btext').one('click',function(e){
+    	console.log('some fucker keeps poking me');
+    	e.preventDefault();
+    	$(this).html('box div box');
+    }).addClass('boom');
+});
+</script>
+</body>
+
+</html>
